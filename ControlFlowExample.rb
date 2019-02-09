@@ -27,6 +27,5 @@ end
 #or, consider this:
 
 problem = false
-print "I'm printing this unless problem" unless problem #<-- this will print because there is no problem (problem == false)
-
+print "I'm printing this unless there's a problem" unless problem #<-- this will print because there is no problem (problem == false)
 #Basically, it's checking to see if hungry is false
