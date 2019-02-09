@@ -60,6 +60,9 @@ puts "You wrote #{user_input}"  #<-- this is a good example of String Interpolat
 #arrays
 my_array = [1,2,3,4,5] #<-- Pretty standard
 my_2d_array = [[1,2,3],["a","b","c"],["bing","boop","bop"]] #<-- an array with arrays, woah!
+#Sorting
+my_array.sort! #<-- sorts alpha/numeric starting at 0/a
+my_array.sort! { |a, b| b<=>a} #<--reverse sort
 
 #hash, like a library from Python
 my_hash1 = {
@@ -67,9 +70,19 @@ my_hash1 = {
     "bloodtype" => "O",
     "shoesize" => "12"
 }
+
 puts my_hash1
 #^-- Hash literal. Explicitly defining what we want
 
 my_hash2 = Hash.new #<--creates a new empty hash
 my_hash2["fruit"] = "apple" #<-- adds "fruit" => "apple" to hash
 puts my_hash2
+
+#SPLAT!
+#A splat allows you to pass multiple arguments to a method, for example:
+def greet_peeps(greeting, *friends)
+    #this method takes a greeting, and however many friends
+    friends.each do |x| puts "#{greeting}, #{friends}"
+    end
+
+greet_peeps("Sup", "Bob", "Travis", "Duke", "Barnabus")

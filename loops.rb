@@ -7,14 +7,14 @@ while count < 11
     count += 1    
 end
 
-#until
+#until loop
 count = 1
 until count > 10
     puts count
     count += 1
 end
 
-#for
+#for loop
 for num in 1...10
     puts num
 end
