@@ -1,3 +1,4 @@
+#Here's an example of replacing text in a string
 puts "Text to search through: "
 text = gets.chomp
 puts "Word to redact: "

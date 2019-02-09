@@ -29,3 +29,13 @@ end
 problem = false
 print "I'm printing this unless there's a problem" unless problem #<-- this will print because there is no problem (problem == false)
 #Basically, it's checking to see if hungry is false
+
+#easy inline if statements:
+dog = true
+cat = false
+puts "We have a dog" if dog
+puts "We have a cat" unless cat
+
+#Ternary
+puts 8 > 3 ? "8 is in fact greater than 3": "8 is not greater than 3"
+# expressoin ? thing to do if true: thing to do if false

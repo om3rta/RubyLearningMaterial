@@ -56,33 +56,11 @@ puts "You wrote #{user_input}"  #<-- this is a good example of String Interpolat
 # && (and), like 77 < 78 && 77 < 77 would be true AND false, which would ultimately be false
 #|| (or), like 3 != 4 || 3 == 4, this would resolve to true because one is actually true
 #! (not), like !true is flase and !false is true
+#||= Conditional. Will only add data to a variable if that variable is empty
 
-#arrays
-my_array = [1,2,3,4,5] #<-- Pretty standard
-my_2d_array = [[1,2,3],["a","b","c"],["bing","boop","bop"]] #<-- an array with arrays, woah!
-#Sorting
-my_array.sort! #<-- sorts alpha/numeric starting at 0/a
-my_array.sort! { |a, b| b<=>a} #<--reverse sort
-
-#hash, like a library from Python
-my_hash1 = {
-    "name" => "Bobo",
-    "bloodtype" => "O",
-    "shoesize" => "12"
-}
-
-puts my_hash1
-#^-- Hash literal. Explicitly defining what we want
-
-my_hash2 = Hash.new #<--creates a new empty hash
-my_hash2["fruit"] = "apple" #<-- adds "fruit" => "apple" to hash
-puts my_hash2
-
-#SPLAT!
-#A splat allows you to pass multiple arguments to a method, for example:
-def greet_peeps(greeting, *friends)
-    #this method takes a greeting, and however many friends
-    friends.each do |x| puts "#{greeting}, #{friends}"
-    end
-
-greet_peeps("Sup", "Bob", "Travis", "Duke", "Barnabus")
+#how to check if an object can receive a method:
+age = 21
+age.respond_to?(:next)
+#Here we check if age.next would work by asking if age would respond to .next
+#.next is a function that returns the next interger
+#since our age variable is an int, it would resolve to true, letting us know we can use .next
